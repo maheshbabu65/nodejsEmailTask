@@ -6,7 +6,7 @@ exports.Emails = (req, res, next) => {
       console.log(products)
       res.render('shop/emails', {
         prods: products,
-        pageTitle: 'All Products',
+        pageTitle: 'All Emails',
         path: '/emails'
       });
     })
