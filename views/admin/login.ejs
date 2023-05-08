@@ -1,0 +1,27 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <form class="product-form" action="/admin/<% if (login) { %>login<% } else { %>registration<% } %>" method="POST">
+            <div class="form-control">
+                <label for="imageUrl">User ID </label>
+                <input type="text" name="user_id" id="email_to" value=" " required>
+            </div>
+            <div class="form-control">
+                <label for="title">password</label>
+                <input type="password" name="password" id="title" value="" >
+            </div>
+            <button class="btn" type="submit"><% if (login) { %>Login<% } else { %>Register<% } %></button>
+            <% if (login) { %> 
+                <a  href="/admin/register">Registration</a>
+                <% }else{ %>
+                    <a  href="/admin/login">Login</a>
+           <% } %>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>

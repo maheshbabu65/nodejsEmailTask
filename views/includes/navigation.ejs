@@ -1,0 +1,23 @@
+<div class="backdrop"></div>
+<header class="main-header">
+    <button id="side-menu-toggle">Menu</button>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+           
+            <li class="main-header__item">
+                <a class="<%= path === '/emails' ? 'active' : '' %>" href="/emails">All Emails</a>
+            </li>
+            
+             
+            <li class="main-header__item">
+                <a class="<%= path === '/admin/send-email' ? 'active' : '' %>" href="/admin/send-email">Send Emails
+                </a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= path === '/admin/login' ? 'active' : '' %>" href="/admin/login">Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+ 
